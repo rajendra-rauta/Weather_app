@@ -70,6 +70,11 @@ body {
 
 /* main header  */
 
+
+
+
+
+
 .main_header_left {
     height: 70rem;
     display: flex;
@@ -283,6 +288,10 @@ footer p {
 .main_layer .middle_layer .fa {
     font-size: 5rem;
     
+}
+.container-fluid {
+    background-color: #fff;
+    color: black;
 }
 }
 
