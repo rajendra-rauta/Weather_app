@@ -47,7 +47,12 @@ body {
 }
 
 .navbar-toggler {
-    background-color: gray;
+    background-color:#fff;
+    color: black;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #snow {
     transition: all linear;
