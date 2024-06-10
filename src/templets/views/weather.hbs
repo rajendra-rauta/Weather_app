@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  {{>link}}
+  </head>
+
+<body>
+
+ {{>navbar}}
+
+    <!-- main header  -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_contant">
+                    <form action="" class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter your City name" autocomplete="off">
+                    <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempInfo">
+                    <div class="top_layer">
+                        <p id="now_day">sunday</p>
+                        <p id="today_date">13 OCT</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get output hear</p>
+                        <div class="middle_layer data_hide" >
+                            <p id="temp"><span id="temp-rel-val">0</span><sup>o</sup>C</p>
+                            <p id="temp_status">O</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer part -->
+
+    {{>footer}}
+    <script src="js/main.js"></script>
+    <script>
+
+     
+       const getCurrentDay = () => {
+
+       let weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+            let currentTime = new Date();
+            let days = weekday[currentTime.getDay()];
+            
+       let  day = document.getElementById("now_day")
+            day.innerText = days;
+        };
+           
+
+            
+         getCurrentDay();
+
+
+
+
+
+
+
+        const getcurTime = () => {
+
+
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            var now = new Date();
+            var month = months[now.getMonth() + 1];
+            var dates = now.getDate();
+            // var year = now.getFullYear();
+            let date = document.querySelector("#today_date")
+
+
+
+            date.innerText = `${dates} / ${month}`;
+
+           
+        };
+getcurTime();
+    
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
